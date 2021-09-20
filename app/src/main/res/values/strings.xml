@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Unsplash</string>
     <string name="welcome_description">The internet’s source of freely-usable images.\nPowered by creators everywhere.</string>
-    <string name="welcome_welcome">Welcome to Unsplash.</string>
+    <string name="welcome_welcome">Welcome to Unsplash</string>
     <string name="welcome_continue">Continue</string>
+    <string name="welcome_image_description">Unsplash</string>
 </resources>
