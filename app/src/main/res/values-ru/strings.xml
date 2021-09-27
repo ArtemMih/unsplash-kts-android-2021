@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unsplash</string>
+    <string name="welcome_description">Источник бесплатных изображений в Интернете.\nСоздано авторами со всего мира.</string>
+    <string name="welcome_welcome">Добро пожаловать в Unsplash</string>
+    <string name="welcome_continue">Продолжить</string>
+    <string name="welcome_image_description">Unsplash</string>
+</resources>
