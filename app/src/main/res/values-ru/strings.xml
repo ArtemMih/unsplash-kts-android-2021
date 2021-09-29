@@ -5,4 +5,7 @@
     <string name="welcome_welcome">Добро пожаловать в Unsplash</string>
     <string name="welcome_continue">Продолжить</string>
     <string name="welcome_image_description">Unsplash</string>
+    <string name="login_button">Авторизоваться</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Пароль</string>
 </resources>

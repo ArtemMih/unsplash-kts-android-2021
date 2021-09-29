@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
-        android:id="@+id/onboardingFragment"
-        android:name="com.artem.unsplash.OnboardingFragment"
+        android:id="@+id/onBoardingFragment"
+        android:name="com.artem.unsplash.OnBoardingFragment"
         android:label="OnboardingFragmentt"
-        tools:layout="@layout/onboarding" >
+        tools:layout="@layout/onboarding">
         <action
             android:id="@+id/action_onboardingFragment_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpTo="@id/onboardingFragment"
+            app:popUpTo="@id/onBoardingFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.artem.unsplash.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/login" >
+        tools:layout="@layout/login">
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
             app:destination="@id/mainFragment"
-            app:popUpTo="@id/onboardingFragment"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
