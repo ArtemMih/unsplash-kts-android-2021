@@ -1,7 +1,6 @@
 package com.artem.unsplash.main_fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -40,7 +39,6 @@ class MainFragment : Fragment(R.layout.main) {
                     visibilityThreshold = 0
                 )
             )
-
             addItemDecoration(DividerItemDecoration(context, orientation))
             setHasFixedSize(true)
         }
@@ -58,7 +56,6 @@ class MainFragment : Fragment(R.layout.main) {
                 image = R.drawable.photo_stub.toString(),
                 author = "Markus Spiske",
                 avatar = R.drawable.ava.toString()
-
             )
             else -> error("Wrong random number")
         }
@@ -71,7 +68,5 @@ class MainFragment : Fragment(R.layout.main) {
             }
         } + getDefaultItems()
         mainAdapter.items = newItems
-        Log.d("Pagination", newItems.size.toString())
     }
-
 }

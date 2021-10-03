@@ -24,5 +24,4 @@ class MainFragmentListAdapter : AsyncListDifferDelegationAdapter<Any>(ComplexDif
         @SuppressLint("DiffUtilEquals")
         override fun areContentsTheSame(first: Any, second: Any): Boolean = first == second
     }
-
 }

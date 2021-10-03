@@ -7,5 +7,4 @@ data class ImageItem(
     val image: String,
     val author: String,
     val avatar: String
-) {
-}
+)

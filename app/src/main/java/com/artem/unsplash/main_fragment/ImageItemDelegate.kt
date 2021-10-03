@@ -1,13 +1,10 @@
 package com.artem.unsplash.main_fragment
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.artem.unsplash.R
+import com.artem.unsplash.databinding.ImageItemBinding
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.image_item.view.*
 
 class ImageItemDelegate : AbsListItemAdapterDelegate<Any, Any, ImageItemDelegate.ViewHolder>() {
 
@@ -15,10 +12,10 @@ class ImageItemDelegate : AbsListItemAdapterDelegate<Any, Any, ImageItemDelegate
         return item is ImageItem
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.image_item, parent, false)
-        return ViewHolder(itemView)
+    override fun onCreateViewHolder(parent: ViewGroup): ImageItemDelegate.ViewHolder {
+        val binding = ImageItemBinding
+            .inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(item: Any, holder: ViewHolder, payloads: MutableList<Any>) {
@@ -26,19 +23,14 @@ class ImageItemDelegate : AbsListItemAdapterDelegate<Any, Any, ImageItemDelegate
     }
 
     inner class ViewHolder(
-        override val containerView: View,
-    ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+        private val binding: ImageItemBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         private var currentItem: ImageItem? = null
 
-
-        fun bind(item: ImageItem) = with(containerView) {
+        fun bind(item: ImageItem) = with(binding) {
             currentItem = item
             author.text = item.author
-            image_view.setOnClickListener {
-
-            }
-
         }
     }
 }

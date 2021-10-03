@@ -1,24 +1,21 @@
 package com.artem.unsplash.main_fragment
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.artem.unsplash.R
+import com.artem.unsplash.databinding.LikeItemBinding
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.like_item.view.*
 
-class LikeItemDelegate: AbsListItemAdapterDelegate<Any,Any,LikeItemDelegate.ViewHolder>() {
+class LikeItemDelegate : AbsListItemAdapterDelegate<Any, Any, LikeItemDelegate.ViewHolder>() {
 
     override fun isForViewType(item: Any, items: MutableList<Any>, position: Int): Boolean {
         return item is LikeItem
     }
 
     override fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.like_item, parent, false)
-        return ViewHolder(itemView)
+        val binding = LikeItemBinding
+            .inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(item: Any, holder: ViewHolder, payloads: MutableList<Any>) {
@@ -26,18 +23,17 @@ class LikeItemDelegate: AbsListItemAdapterDelegate<Any,Any,LikeItemDelegate.View
     }
 
     inner class ViewHolder(
-        override val containerView: View,
-        ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+        private val binding: LikeItemBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         private var currentItem: LikeItem? = null
 
-
-        fun bind(item: LikeItem) = with(containerView) {
+        fun bind(item: LikeItem) = with(binding) {
             currentItem = item
-            like_count.text = item.likeCount.toString()
-            thumb_up.setOnClickListener {
+            likeCount.text = item.likeCount.toString()
+            thumbUp.setOnClickListener {
                 item.likeCount++
-                like_count.text = item.likeCount.toString()
+                likeCount.text = item.likeCount.toString()
             }
         }
     }
