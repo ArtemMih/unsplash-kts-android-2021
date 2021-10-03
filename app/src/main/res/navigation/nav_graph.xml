@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.artem.unsplash.OnBoardingFragment"
+        android:name="com.artem.unsplash.on_boarding_fragment.OnBoardingFragment"
         android:label="OnboardingFragmentt"
-        tools:layout="@layout/onboarding">
+        tools:layout="@layout/on_boarding">
         <action
             android:id="@+id/action_onboardingFragment_to_loginFragment"
             app:destination="@id/loginFragment"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.artem.unsplash.LoginFragment"
+        android:name="com.artem.unsplash.login_fragment.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/login">
         <action

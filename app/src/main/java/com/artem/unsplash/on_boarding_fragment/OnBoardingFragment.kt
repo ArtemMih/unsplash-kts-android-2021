@@ -1,17 +1,20 @@
-package com.artem.unsplash
+package com.artem.unsplash.on_boarding_fragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.artem.unsplash.R
+import com.artem.unsplash.databinding.OnBoardingBinding
 
-class OnBoardingFragment : Fragment(R.layout.onboarding) {
+class OnBoardingFragment : Fragment(R.layout.on_boarding) {
+
+    private val binding: OnBoardingBinding by viewBinding(OnBoardingBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val continueToLogin = view.findViewById<Button>(R.id.continue_to_login)
-        continueToLogin.setOnClickListener {
+        binding.continueToLogin.setOnClickListener {
             val action = OnBoardingFragmentDirections.actionOnboardingFragmentToLoginFragment()
             findNavController().navigate(action)
         }

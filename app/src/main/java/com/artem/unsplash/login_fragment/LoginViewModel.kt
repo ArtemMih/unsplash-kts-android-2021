@@ -1,4 +1,4 @@
-package com.artem.unsplash
+package com.artem.unsplash.login_fragment
 
 import android.util.Patterns
 import androidx.lifecycle.LiveData
