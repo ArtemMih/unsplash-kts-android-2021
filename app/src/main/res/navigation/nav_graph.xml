@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.artem.unsplash.MainFragment"
+        android:name="com.artem.unsplash.main_fragment.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/main" />
 
