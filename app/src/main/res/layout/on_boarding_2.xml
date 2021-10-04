@@ -27,14 +27,14 @@
         android:layout_marginBottom="8dp"
         android:text="@string/welcome_header_2"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/main_text"
+        app:layout_constraintBottom_toTopOf="@+id/mainText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/main_text"
+        android:id="@+id/mainText"
         style="@style/TextOnPrimary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
