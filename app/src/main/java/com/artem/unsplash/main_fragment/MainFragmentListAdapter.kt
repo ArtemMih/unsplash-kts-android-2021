@@ -10,6 +10,7 @@ class MainFragmentListAdapter : AsyncListDifferDelegationAdapter<Any>(ComplexDif
         delegatesManager
             .addDelegate(LikeItemDelegate())
             .addDelegate(ImageItemDelegate())
+            .addDelegate(PageLoadingDelegate())
     }
 
     class ComplexDiffCallback : DiffUtil.ItemCallback<Any>() {

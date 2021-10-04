@@ -61,10 +61,10 @@ class MainFragment : Fragment(R.layout.main) {
 
     private fun loadMoreItems() {
         val newItems = mainAdapter.items.toMutableList().apply {
-            if (lastOrNull() is Int) {
+            if (lastOrNull() is LoadingItem) {
                 removeLastOrNull()
             }
-        } + getDefaultItems()
+        } + getDefaultItems() + LoadingItem()
         mainAdapter.items = newItems
     }
 }
