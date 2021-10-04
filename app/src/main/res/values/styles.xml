@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
 
     <style name="ButtonOnPrimary" parent="Widget.MaterialComponents.Button">
@@ -8,5 +9,19 @@
 
     <style name="TextOnPrimary" parent="Widget.AppCompat.TextView">
         <item name="android:textColor">@color/colorOnPrimary</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColorHint">@color/colorSecondaryVariant</item>
+        <item name="boxStrokeColor">@color/colorSecondaryVariant</item>
+        <item name="counterTextColor">@color/colorSecondaryVariant</item>
+        <item name="endIconTint">@color/colorSecondaryVariant</item>
+        <item name="hintTextColor">@color/colorSecondaryVariant</item>
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="android:textColorHighlight">@color/colorOnPrimary</item>
+        <item name="android:textCursorDrawable">@null</item>
     </style>
 </resources>
