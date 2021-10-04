@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Unsplash</string>
-    <string name="welcome_description">Источник бесплатных изображений в Интернете.\nСоздано авторами со всего мира.</string>
-    <string name="welcome_welcome">Добро пожаловать в Unsplash</string>
+    <string name="welcome_skip">Пропустить</string>
+    <string name="welcome_text_1">Источник бесплатных изображений в Интернете.\nСоздано авторами со всего мира.</string>
+    <string name="welcome_header_1">Добро пожаловать в Unsplash</string>
     <string name="welcome_continue">Продолжить</string>
     <string name="welcome_image_description">Unsplash</string>
+    <string name="welcome_header_2">Более миллиона отобранных фотографий</string>
+    <string name="welcome_text_2">Мы отбираем вручную каждую фотографию вручную и берем только лучшее, так что независимо от того, что вам нужно, вы найдете именно то, что ищете на Unsplash.</string>
+    <string name="welcome_header_3">Сообщество из 211166 фотографов</string>
+    <string name="welcome_text_3">Unsplash является домом для растущего сообщества фотографов — любителей, профессионалов, молодых брендов и всех, кто находится между ними.</string>
     <string name="login_button">Авторизоваться</string>
     <string name="login_email">Email</string>
     <string name="login_password">Пароль</string>

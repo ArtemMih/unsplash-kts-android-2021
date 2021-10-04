@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Unsplash</string>
-    <string name="welcome_description">The internet’s source of freely-usable images.\nPowered by creators everywhere.</string>
-    <string name="welcome_welcome">Welcome to Unsplash</string>
+    <string name="welcome_skip">Skip</string>
+    <string name="welcome_text_1">The internet’s source of freely-usable images.\nPowered by creators everywhere.</string>
+    <string name="welcome_header_1">Welcome to Unsplash</string>
     <string name="welcome_continue">Continue</string>
     <string name="welcome_image_description">Unsplash</string>
+    <string name="welcome_header_2">Over one million curated photos</string>
+    <string name="welcome_text_2">We hand-select every photo and accept only the best, so that no matter what you need—you’ll find exactly what you’re looking for on Unsplash.</string>
+    <string name="welcome_header_3">A community of 211,166 photographers</string>
+    <string name="welcome_text_3">Unsplash is home to a growing community of photographers—from hobbyists, professionals, emerging brands and everyone in between.</string>
     <string name="login_button">Login</string>
     <string name="login_email">Email</string>
     <string name="login_password">Password</string>
