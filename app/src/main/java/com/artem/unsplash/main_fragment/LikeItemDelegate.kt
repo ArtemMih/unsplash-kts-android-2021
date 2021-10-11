@@ -26,10 +26,7 @@ class LikeItemDelegate : AbsListItemAdapterDelegate<Any, Any, LikeItemDelegate.V
         private val binding: LikeItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        private var currentItem: LikeItem? = null
-
         fun bind(item: LikeItem) = with(binding) {
-            currentItem = item
             likeCount.text = item.likeCount.toString()
             thumbUp.setOnClickListener {
                 item.likeCount++

@@ -26,10 +26,7 @@ class ImageItemDelegate : AbsListItemAdapterDelegate<Any, Any, ImageItemDelegate
         private val binding: ImageItemBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        private var currentItem: ImageItem? = null
-
         fun bind(item: ImageItem) = with(binding) {
-            currentItem = item
             author.text = item.author
         }
     }

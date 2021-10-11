@@ -14,5 +14,4 @@ class OnBoardingAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
             else -> OnBoardingItem3Fragment()
         }
     }
-
 }

@@ -22,5 +22,4 @@ class OnBoardingFragment : Fragment(R.layout.on_boarding) {
         viewPager.adapter = onBoardingAdapter
         binding.indicator.attachToPager(viewPager)
     }
-
 }
