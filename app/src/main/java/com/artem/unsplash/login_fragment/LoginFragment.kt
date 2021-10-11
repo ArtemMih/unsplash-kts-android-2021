@@ -1,50 +1,49 @@
-package com.artem.unsplash
+package com.artem.unsplash.login_fragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.textfield.TextInputEditText
+import by.kirich1409.viewbindingdelegate.viewBinding
+import com.artem.unsplash.R
+import com.artem.unsplash.databinding.LoginBinding
 
 class LoginFragment : Fragment(R.layout.login) {
 
+    private val binding: LoginBinding by viewBinding(LoginBinding::bind)
     private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
-        val buttonLogin: Button = view.findViewById(R.id.buttonLogin)
-        val email: TextInputEditText = view.findViewById(R.id.email)
-        val pass: TextInputEditText = view.findViewById(R.id.password)
 
-        email.addTextChangedListener { newMail ->
+        binding.email.addTextChangedListener { newMail ->
             loginViewModel.emailChanged(newMail.toString())
         }
 
-        pass.addTextChangedListener { newPass ->
+        binding.password.addTextChangedListener { newPass ->
             loginViewModel.passwordChanged(newPass.toString())
         }
 
         loginViewModel.email.observe(viewLifecycleOwner) { newEmail ->
-            if (newEmail != email.text.toString()) {
-                email.setText(newEmail)
+            if (newEmail != binding.email.text.toString()) {
+                binding.email.setText(newEmail)
             }
         }
 
         loginViewModel.password.observe(viewLifecycleOwner) { newPassword ->
-            if (newPassword != pass.text.toString()) {
-                email.setText(newPassword)
+            if (newPassword != binding.password.text.toString()) {
+                binding.email.setText(newPassword)
             }
         }
 
         loginViewModel.isValid.observe(viewLifecycleOwner) { isValid ->
-            buttonLogin.isEnabled = isValid
+            binding.buttonLogin.isEnabled = isValid
         }
 
-        buttonLogin.setOnClickListener {
+        binding.buttonLogin.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToMainFragment()
             findNavController().navigate(action)
         }
